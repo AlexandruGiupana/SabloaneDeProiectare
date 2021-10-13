@@ -26,4 +26,8 @@ public class Book {
     public Chapter getChapter(int index) {
         return this.chapters.stream().filter(chapter -> chapter.getIndex() == index).collect(Collectors.toList()).get(0);
     }
+
+    public void print() {
+        System.out.println(title + " " + authors + " " + chapters);
+    }
 }

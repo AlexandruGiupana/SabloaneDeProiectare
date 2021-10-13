@@ -26,4 +26,8 @@ public class Chapter {
     public SubChapter getSubChapter(int index) {
         return subChapters.stream().filter(subChapter -> subChapter.getIndex() == index).collect(Collectors.toList()).get(0);
     }
+
+    public void print() {
+        System.out.println(name + " " + subChapters);
+    }
 }
