@@ -15,8 +15,8 @@ public class Main {
         scOneOne.createNewParagraph("Paragraph 3");
         scOneOne.createNewImage("Image 1");
         scOneOne.createNewParagraph("Paragraph4");
+        scOneOne.createNewTable("Table 1");
         scOneOne.createNewParagraph("Paragraph5");
-        scOneOne.createNewTable("Table1");
 
         scOneOne.print();
     }
