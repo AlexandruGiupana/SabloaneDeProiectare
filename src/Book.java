@@ -1,37 +1,29 @@
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Book {
-
     private String title;
-    private List<String> images;
-    private List<String> paragraphs;
-    private List<String> tables;
+    private List<Author> authors;
+    private List<Chapter> chapters;
 
     public Book(String title) {
         this.title = title;
-        this.images = new LinkedList<>();
-        this.paragraphs = new LinkedList<>();
-        this.tables = new LinkedList<>();
+        this.authors = new LinkedList<>();
+        this.chapters = new LinkedList<>();
     }
 
-    public void createNewParagraph(String paragraph) {
-        this.paragraphs.add(paragraph);
+    public void addAuthor(Author author) {
+        this.authors.add(author);
     }
 
-    public void createNewImage(String image) {
-        this.images.add(image);
+    public int createChapter(String chapterName) {
+        Chapter newChapter = new Chapter(chapterName);
+        this.chapters.add(newChapter);
+        return newChapter.getIndex();
     }
 
-    public void createNewTable(String table) {
-        this.tables.add(table);
-    }
-
-    public void print() {
-         System.out.println(
-                 "title: " + title +
-                "\nimages: " + images +
-                "\nparagraphs: " + paragraphs +
-                "\ntables: " + tables);
+    public Chapter getChapter(int index) {
+        return this.chapters.stream().filter(chapter -> chapter.getIndex() == index).collect(Collectors.toList()).get(0);
     }
 }
