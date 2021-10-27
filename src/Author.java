@@ -5,11 +5,6 @@ public class Author {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return name;
-    }
-
     public void print() {
         System.out.println(name);
     }

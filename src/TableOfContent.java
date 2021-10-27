@@ -1,13 +1,8 @@
-public class Paragraph implements Element{
-    private String text;
-
-    public Paragraph(String text) {
-        this.text = text;
-    }
+public class TableOfContent implements Element {
 
     @Override
     public void print() {
-        System.out.println("Paragraph: " + text);
+
     }
 
     @Override
