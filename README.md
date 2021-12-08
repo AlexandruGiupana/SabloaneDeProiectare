@@ -12,3 +12,8 @@ all good
 https://github.com/AlexandruGiupana/SabloaneDeProiectare/tree/e7ed7451864bff8326697dd3e0ee7d359fcf97fd
 
 all good
+
+# Feedback lab5:
+https://github.com/AlexandruGiupana/SabloaneDeProiectare/tree/7241738c6af2d30135c14a4c2a74a0117f843270
+
+all good
