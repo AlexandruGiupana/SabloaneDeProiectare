@@ -1,7 +1,7 @@
 import java.util.concurrent.TimeUnit;
 
 public class Image implements Element {
-    public String url;
+    private String url;
 
     public Image(String name) {
         this.url = name;
@@ -12,8 +12,7 @@ public class Image implements Element {
         }
     }
 
-    @Override
-    public void print() {
+    public void render() {
         System.out.println("Image with name: " + url);
     }
 
@@ -28,7 +27,16 @@ public class Image implements Element {
     }
 
     @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
+
+    @Override
     public Element get(int i) {
         return null;
+    }
+
+    public String getUrl() {
+        return url;
     }
 }

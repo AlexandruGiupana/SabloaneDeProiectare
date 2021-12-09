@@ -13,13 +13,18 @@ public class Book extends Section {
         this.authors.add(author);
     }
 
+    public void accept (Visitor visitor) {
+        visitor.visit(this);
+        for(Element el: elements) {
+            el.accept(visitor);
+        }
+    }
 
-    public void print() {
+    public void render() {
         System.out.println("Authors: ");
         for(Author a: authors) {
             a.print();
         }
         System.out.println();
-        super.print();
     }
 }

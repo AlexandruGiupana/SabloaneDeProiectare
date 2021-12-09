@@ -11,8 +11,7 @@ public class Paragraph implements Element{
         this.alignStrategy = alignStrategy;
     }
 
-    @Override
-    public void print() {
+    public void render() {
         if(alignStrategy == null) {
             System.out.println("Paragraph: " + text);
         } else {
@@ -28,6 +27,11 @@ public class Paragraph implements Element{
     @Override
     public void remove(Element e) {
 
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
 
     @Override

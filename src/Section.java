@@ -3,18 +3,17 @@ import java.util.List;
 
 public class Section implements Element {
     private String title;
-    private List<Element> elements = new LinkedList<>();
+    protected List<Element> elements = new LinkedList<>();
 
     public Section(String title) {
         this.title = title;
     }
 
-    @Override
-    public void print() {
+    public void render() {
         System.out.println(title);
-        for(Element el: elements) {
-            el.print();
-        }
+//        for(Element el: elements) {
+//            el.render();
+//        }
     }
 
     @Override
@@ -28,7 +27,19 @@ public class Section implements Element {
     }
 
     @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+        for(Element el: elements) {
+            el.accept(visitor);
+        }
+    }
+
+    @Override
     public Element get(int i) {
         return elements.get(i);
+    }
+
+    public String getTitle() {
+        return title;
     }
 }
