@@ -17,3 +17,9 @@ all good
 https://github.com/AlexandruGiupana/SabloaneDeProiectare/tree/7241738c6af2d30135c14a4c2a74a0117f843270
 
 all good
+
+# Feedback lab6:
+- statistics (just table, image and paragraphs)
+- table of content, just the section
+
+# Proposed grade: 10
