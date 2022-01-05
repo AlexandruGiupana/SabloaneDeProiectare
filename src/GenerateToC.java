@@ -26,12 +26,10 @@ public class GenerateToC implements Visitor {
 
     @Override
     public void visit(Image image) {
-        tableOfContent.addElement(image.getUrl());
     }
 
     @Override
     public void visit(Table table) {
-        tableOfContent.addElement(table.getTitle());
     }
 
     public TableOfContent getToC() {
